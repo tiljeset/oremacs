@@ -1,37 +1,39 @@
 ;; keys -*- lexical-binding: t -*-
 ;;* Ctrl shortcuts
-(global-set-key "\C-a" 'ora-move-beginning-of-line)      ; 'move-beginning-of-line
-;; (global-set-key "\C-b" 'backward-char)                ; default
+(global-set-key "\C-a" 'ora-move-beginning-of-line)    ; 'move-beginning-of-line
+;; (global-set-key "\C-b" 'backward-char)              ; default
 ;; (global-set-key "\C-c" 'mode-specific-command-prefix) ; default
-;; (global-set-key "\C-d" 'delete-char)                  ; default
-;; (global-set-key "\C-e" 'move-end-of-line)             ; default
-;; (global-set-key "\C-f" 'forward-char)                 ; default
-;; (global-set-key "\C-g" 'keyboard-quit)                ; default
-;; (global-set-key "\C-h" nil)                           ; 'help-command
-;; (global-set-key "\C-i" 'indent-for-tab-command)       ; default
+;; (global-set-key "\C-d" 'delete-char)                ; default
+;; (global-set-key "\C-e" 'move-end-of-line)           ; default
+;; (global-set-key "\C-f" 'forward-char)               ; default
+;; (global-set-key "\C-g" 'keyboard-quit)              ; default
+;; (global-set-key "\C-h" nil)                         ; 'help-command
+;; (global-set-key "\C-i" 'indent-for-tab-command)     ; default
 (global-set-key (kbd "C-i") 'indent-for-tab-command)
-;; (global-set-key "\C-j" 'newline)                      ; default
-;; (global-set-key "\C-k" 'kill-line)                    ; default
-;; (global-set-key "\C-l" 'recenter-top-bottom)          ; default
-;; (global-set-key "\C-m" 'newline-and-indent)           ; default
-;; (global-set-key "\C-n" 'next-line)                    ; default
-(global-set-key "\C-o" 'aya-open-line)                   ; 'open-line
-(keyboard-translate ?\C-h ?\C-p)                         ; swap
-(keyboard-translate ?\C-p ?\C-h)                         ; swap
-;; (global-set-key "\C-q" 'quoted-insert)                ; default
-(global-set-key "\C-r" 'swiper)                          ; 'isearch-backward
-(global-set-key "\C-s" 'counsel-grep-or-swiper)          ; 'isearch-forward
-(global-set-key "\C-t" 'smex)                            ; 'transpose-chars
-(global-set-key "\C-u" 'undo)                            ; 'universal-argument
-;; (global-set-key "\C-v" 'scroll-up)                    ; default
-;; (global-set-key "\C-w" 'kill-region)                  ; default
-;; (global-set-key "\C-x")                               ; default
+;; (global-set-key "\C-j" 'newline)                    ; default
+;; (global-set-key "\C-k" 'kill-line)                  ; default
+;; (global-set-key "\C-l" 'recenter-top-bottom)        ; default
+;; (global-set-key "\C-m" 'newline-and-indent)         ; default
+;; (global-set-key "\C-n" 'next-line)                  ; default
+(global-set-key "\C-o" 'aya-open-line)                 ; 'open-line
+;; (keyboard-translate ?\C-h ?\C-p)                    ; swap
+;; (keyboard-translate ?\C-p ?\C-h)                    ; swap
+;; (global-set-key "\C-q" 'quoted-insert)              ; default
+;; (global-set-key "\C-r" 'swiper) 'isearch-backward
+(global-set-key "\C-s" 'swiper)
+;; (global-set-key "\C-s" 'counsel-grep-or-swiper)
+                                                       ; 'isearch-forward
+;; (global-set-key "\C-t" 'smex)                       ; 'transpose-chars
+;; (global-set-key "\C-u" 'undo)                       ; 'universal-argument
+;; (global-set-key "\C-v" 'scroll-up)                  ; default
+(global-set-key "\C-w" 'backward-kill-word)            ; kill region
+;; (global-set-key "\C-x")                             ; default
 ;; (global-set-key "\C-y" 'yank)                         ; default
 (global-set-key (kbd "C-z") 'capitalize-word-toggle)     ; capitili[z]e
 (global-set-key (kbd "C-.") 'comment-dwim)
 (global-set-key (kbd "C-,") 'lispy-kill-at-point)
 (global-set-key (kbd "C-'") 'avy-goto-char-timer)
-(global-set-key (kbd "C-/") 'hydra-org-objects/body)
+;; (global-set-key (kbd "C-/") 'hydra-org-objects/body)
 (global-set-key (kbd "C-7") 'mc/mark-next-like-this)
 ;;* Ctrl Meta shortcuts
 (global-set-key (kbd "C-M-,") 'lispy-mark)
@@ -105,6 +107,7 @@
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "M-a") 'ace-link)
 (global-set-key (kbd "M-u") 'universal-argument)
+(global-set-key (kbd "M-o") 'ace-window)
 
 ;;* C-c shortcuts
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -144,6 +147,7 @@
 (global-set-key (kbd "C-x C-r") (lambda () (interactive) (revert-buffer nil t)))
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-x C-l") 'locate)
+(global-set-key (kbd "C-x C-k") 'kill-region)
 ;; (global-set-key (kbd "C-x m") 'mu4e-compose-new)
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-x p") 'proced)
