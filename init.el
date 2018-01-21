@@ -96,7 +96,7 @@
 (setq create-lockfiles nil)
 ;;* Bootstrap
 ;;** autoloads
-(load (concat emacs-d "loaddefs.el") nil t)
+(load (concat emacs-d "site-lisp/" "loaddefs.el") nil t)
 (load (concat emacs-d "personal/loaddefs.el") t t)
 ;;** enable features
 (mapc (lambda (x) (put x 'disabled nil))

@@ -595,9 +595,9 @@ it is displayed along with the global value."
 ;;;###autoload
 (defun update-all-autoloads ()
   (interactive)
-  (cd emacs-d)
+  (cd (expand-file-name emacs-d))
   (let ((generated-autoload-file
-         (expand-file-name "loaddefs.el")))
+         (expand-file-name "loaddefs.el" "site-lisp/")))
     (when (not (file-exists-p generated-autoload-file))
       (with-current-buffer (find-file-noselect generated-autoload-file)
         (insert ";;") ;; create the file with non-zero size to appease autoload
