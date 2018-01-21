@@ -403,15 +403,15 @@ If called with a prefix, prompts for flags to pass to ag."
            emacs-d)))
 
 ;;* Bookmarks
-;;;###autoload
-(defun bmk/magit-status ()
-  "Bookmark for `magit-status'."
-  (interactive)
-  (when (and (equal system-name "firefly")
-             (buffer-file-name))
-    (delete-trailing-whitespace)
-    (save-buffer))
-  (call-interactively 'magit-status))
+;; ;;;###autoload
+;; (defun bmk/magit-status ()
+;;   "Bookmark for `magit-status'."
+;;   (interactive)
+;;   (when (and (equal system-name "firefly")
+;;              (buffer-file-name))
+;;     (delete-trailing-whitespace)
+;;     (save-buffer))
+;;   (call-interactively 'magit-status))
 
 ;;;###autoload
 (defun bmk/scratch ()

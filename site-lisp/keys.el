@@ -144,8 +144,10 @@
 (global-set-key (kbd "C-c C-j") 'avy-resume)
 
 ;;* C-x shortcuts
-(global-set-key (kbd "C-x C-r") (lambda () (interactive) (revert-buffer nil t)))
+;; (global-set-key (kbd "C-x C-r") (lambda () (interactive) (revert-buffer nil t)))
 (global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x C-l") 'locate)
 (global-set-key (kbd "C-x C-k") 'kill-region)
 ;; (global-set-key (kbd "C-x m") 'mu4e-compose-new)
