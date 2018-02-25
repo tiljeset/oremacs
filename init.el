@@ -22,10 +22,12 @@
   (require 'eclipse-theme))
 ;;** Font
 (condition-case nil
-    (set-frame-font "DejaVu Sans Mono")
+    (set-frame-font "Hack")
+    ;; (set-frame-font "DejaVu Sans Mono")
   (error
    (set-frame-font "Lucida Sans Typewriter")))
-(set-face-attribute 'default (selected-frame) :height 113)
+(set-face-attribute 'default (selected-frame) :height 106)
+;; (set-face-attribute 'default (selected-frame) :height 113)
 ;; ;;* Customize
 (defmacro csetq (variable value)
   `(funcall (or (get ',variable 'custom-set) 'set-default) ',variable ,value))
