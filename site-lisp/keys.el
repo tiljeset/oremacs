@@ -20,7 +20,7 @@
 ;; (keyboard-translate ?\C-p ?\C-h)                    ; swap
 ;; (global-set-key "\C-q" 'quoted-insert)              ; default
 ;; (global-set-key "\C-r" 'swiper) 'isearch-backward
-(global-set-key "\C-s" 'swiper)
+;; (global-set-key "\C-s" 'swiper)
 ;; (global-set-key "\C-s" 'counsel-grep-or-swiper)
                                                        ; 'isearch-forward
 ;; (global-set-key "\C-t" 'smex)                       ; 'transpose-chars
@@ -29,7 +29,7 @@
 (global-set-key "\C-w" 'backward-kill-word)            ; kill region
 ;; (global-set-key "\C-x")                             ; default
 ;; (global-set-key "\C-y" 'yank)                         ; default
-(global-set-key (kbd "C-z") 'capitalize-word-toggle)     ; capitili[z]e
+;; (global-set-key (kbd "C-z") 'capitalize-word-toggle) ; capitili[z]e
 (global-set-key (kbd "C-.") 'comment-dwim)
 (global-set-key (kbd "C-,") 'lispy-kill-at-point)
 (global-set-key (kbd "C-'") 'avy-goto-char-timer)
@@ -107,7 +107,8 @@
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "M-a") 'ace-link)
 (global-set-key (kbd "M-u") 'universal-argument)
-(global-set-key (kbd "M-o") 'ace-window)
+
+(bind-key* (kbd "M-o") 'ace-window)     ;overwrties major mode keybindings
 
 ;;* C-c shortcuts
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -122,7 +123,7 @@
 (global-set-key (kbd "C-c i") 'counsel-imenu)
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-c k") 'counsel-ag)
-(global-set-key (kbd "C-c k") 'counsel-rg)
+;; (global-set-key (kbd "C-c k") 'counsel-rg)
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c m") 'counsel-linux-app)
 (global-set-key (kbd "C-c n") 'counsel-fzf)
