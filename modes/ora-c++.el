@@ -105,17 +105,16 @@ and <code>...</code>."
               (setq aya-current function-body)
               (exit-minibuffer)))))
 
-(require 'soap)
-(dolist (k '("+" "-" "*" "/" "%" "&" "|" "<" "=" ">" ","))
-  (define-key c++-mode-map (kbd k) 'soap-command))
+;; (require 'soap)
+;; (dolist (k '("+" "-" "*" "/" "%" "&" "|" "<" "=" ">" ","))
+;;   (define-key c++-mode-map (kbd k) 'soap-command))
 
-(dolist (k '("+" "-" "*" "/" "%" "&" "|" "<" "=" ">" ","))
-  (define-key c-mode-map (kbd k) 'soap-command))
+;; (dolist (k '("+" "-" "*" "/" "%" "&" "|" "<" "=" ">" ","))
+;;   (define-key c-mode-map (kbd k) 'soap-command))
 
 ;;** Hooks
 ;;;###autoload
 (defun ora-c-common-hook ()
-  (google-set-c-style)
   (google-make-newline-indent)
   (subword-mode))
 
