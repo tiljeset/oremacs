@@ -273,6 +273,8 @@
     (setq projectile-switch-project-action
           (lambda ()
             (dired (projectile-project-root)))))
+(use-package counsel-projectile
+    :init (counsel-projectile-mode 1))
 (use-package find-file-in-project
     :commands find-file-in-project)
 (use-package magit
