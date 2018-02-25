@@ -152,4 +152,26 @@ and <code>...</code>."
   ("r" gud-run "run")
   ("q" nil "quit"))
 
+;; RTags
+(use-package rtags :ensure)
+
+(defun ciao-goto-symbol ()
+  (interactive)
+  (deactivate-mark)
+  (ring-insert find-tag-marker-ring (point-marker))
+  (or (and (require 'rtags nil t)
+           (rtags-find-symbol-at-point))
+      (and (require 'semantic/ia)
+           (condition-case nil
+               (semantic-ia-fast-jump (point))
+             (error nil)))))
+(define-key c++-mode-map (kbd "M-.") 'ciao-goto-symbol)
+(define-key c++-mode-map (kbd "M-,") 'pop-tag-mark)
+
+;; don't indent namespaces
+(defun my-c-setup ()
+   (c-set-offset 'innamespace [0]))
+(add-hook 'c++-mode-hook 'my-c-setup)
+(editorconfig-mode 1)
+
 (provide 'ora-c++)
