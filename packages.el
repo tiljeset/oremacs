@@ -16,10 +16,12 @@
     ace-link
     ace-window
     ace-popup-menu
+    ag
     alert
     auto-compile
     auto-yasnippet
     auctex
+    base16-theme
     cmake-mode
     company
     counsel
@@ -50,6 +52,7 @@
     find-file-in-project
     rainbow-mode
     request
+    rtags
     slime
     smex
     swiper
@@ -58,7 +61,8 @@
     vimish-fold
     wgrep
     worf
-    yaml-mode)
+    yaml-mode
+    editorconfig)
   "List of packages that I like.")
 
 ;; install required
