@@ -325,3 +325,5 @@
     (add-to-list 'magic-mode-alist (cons "ELF" 'elf-mode)))
 (require 'server)
 (or (server-running-p) (server-start))
+(defalias 'qr 'query-replace)
+(defalias 'qrr 'query-replace-regexp)
