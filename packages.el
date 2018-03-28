@@ -49,6 +49,7 @@
     org-download
     powerline
     projectile
+    counsel-projectile
     find-file-in-project
     rainbow-mode
     request
