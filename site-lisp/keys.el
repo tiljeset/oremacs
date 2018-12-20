@@ -106,7 +106,8 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "M-a") 'ace-link)
-(global-set-key (kbd "M-u") 'universal-argument)
+
+(global-set-key (kbd "M-u") 'upcase-word)
 
 (bind-key* (kbd "M-o") 'ace-window)     ;overwrties major mode keybindings
 
@@ -175,7 +176,7 @@
 (global-set-key [C-f8] 'bookmark-set)
 (global-set-key [f9] 'delete-other-windows)
 (global-set-key [C-f9] 'delete-window)
-(global-set-key [f11] 'ora-org-clock-out)
+(global-set-key [f11] 'toggle-frame-fullscreen)
 (global-set-key [C-f11] 'org-clock-goto)
 (global-set-key [f12] 'orfu-agenda-day)
 (global-set-key [C-f12] 'orfu-agenda-quick)

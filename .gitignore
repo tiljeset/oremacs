@@ -6,4 +6,10 @@ etc/log
 backups/
 projectile-bookmarks.eld
 recentf
-auto-save-list/
+auto-save-list/eshell/
+session.*
+tramp
+url/
+smex-items
+semanticdb
+projectile.cache

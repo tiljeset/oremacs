@@ -66,6 +66,7 @@ and <code>...</code>."
 ;;** Base
 (define-key c-mode-base-map "\C-c\C-c" nil)
 (define-key c-mode-base-map (kbd "C-/") nil)
+(define-key c-mode-base-map (kbd "M-m") 'projectile-compile-project)
 (define-key c-mode-base-map (kbd "C-M-h") 'moo-jump-local)
 (define-key c-mode-base-map (kbd "C-M-j") 'moo-jump-directory)
 (define-key c-mode-base-map "σ" 'ora-braces-c++)
@@ -125,7 +126,7 @@ and <code>...</code>."
 ;;;###autoload
 (defun ora-c++-hook ()
   (auto-complete-mode 1)
-  (c-toggle-auto-newline)
+  ;; (c-toggle-auto-newline)
   (hs-minor-mode))
 
 ;;* gud
@@ -170,7 +171,10 @@ and <code>...</code>."
 
 ;; don't indent namespaces
 (defun my-c-setup ()
-   (c-set-offset 'innamespace [0]))
+  (c-set-offset 'innamespace [0])
+  (c-set-offset 'statement-case-open 0)
+  (c-set-offset 'substatement-open 0)
+  )
 (add-hook 'c++-mode-hook 'my-c-setup)
 (editorconfig-mode 1)
 
