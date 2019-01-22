@@ -40,3 +40,6 @@
 [submodule "git/org-mode"]
 	path = git/org-mode
 	url = https://github.com/abo-abo/org-mode
+[submodule "git/ng2-mode"]
+	path = git/ng2-mode
+	url = git@github.com:AdamNiederer/ng2-mode.git
