@@ -13,3 +13,10 @@ url/
 smex-items
 semanticdb
 projectile.cache
+.cask
+.org-id-locations
+.python-environments/
+ac-comphist.dat
+auto-save-list/
+bookmarks
+eshell/
