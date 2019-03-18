@@ -333,6 +333,24 @@
 ;; enable projectile caching -- greatly helps in large projects like linux kernel
 (setq projectile-enable-caching t)
 
+(defun set-dark-wm-theme (frame)
+  (select-frame frame) ;; this is important!
+  (when (display-graphic-p)
+    (progn
+      (when (file-exists-p "/usr/bin/xprop")
+    (progn
+      (defvar winid nil)
+      (setq winid (frame-parameter frame 'outer-window-id))
+      (call-process "xprop" nil nil nil "-f" "_GTK_THEME_VARIANT" "8u" "-set" "_GTK_THEME_VARIANT" "dark" "-id" winid))))))
+(defun on-after-init ()
+  (set-dark-wm-theme (selected-frame))
+  (unless (display-graphic-p (selected-frame))
+    (set-face-background 'default "unspecified-bg" (selected-frame))))
+
+(add-hook 'window-setup-hook 'on-after-init)
+
+(add-hook 'after-make-frame-functions 'set-dark-wm-theme)
+
 ;; php configuration
 ;; (use-package web-mode
 ;;     :ensure
